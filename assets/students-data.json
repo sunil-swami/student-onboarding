@@ -1,0 +1,46 @@
+[
+    {
+        "id":1,
+        "name": "Tom ",
+        "category": "domestic",
+        "domicileCertificate": true,
+        "birthCertificate": true,
+        "previousMarkSheet": true,
+        "policeClearance": true,
+        "passport": true,
+        "dateOfBirth":"Wed Apr 03 2001 00:00:00 GMT+0530 (India Standard Time)",
+        "signedDeclaration": true,
+        "fatherName": "John Dev",
+        "motherName": "Kathy Dev",
+        "lastClassScore": 99
+    },
+    {
+        "id":2,
+        "name": "Kathy ",
+        "category": "international",
+        "domicileCertificate": true,
+        "birthCertificate": true,
+        "previousMarkSheet": true,
+        "policeClearance": true,
+        "passport": true,
+        "fatherName": "John Dev",
+        "motherName": "Ali Dev",
+        "lastClassScore": 99,
+        "dateOfBirth":"Wed Apr 03 2011 00:00:00 GMT+0530 (India Standard Time)"
+    },
+    {
+        "id":3,
+        "name": "Mike ",
+        "category": "international",
+        "domicileCertificate": true,
+        "birthCertificate": true,
+        "previousMarkSheet": true,
+        "policeClearance": true,
+        "passport": true,
+        "fatherName": "Stoke Dev",
+        "motherName": "Ali Dev",
+        "lastClassScore": 99,
+        "dateOfBirth":"Wed Apr 03 1991 00:00:00 GMT+0530 (India Standard Time)"
+    }
+  ]
+  
