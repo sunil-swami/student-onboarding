@@ -1,0 +1,12 @@
+.check-box{
+    display: grid;
+}
+.pushRight{
+    margin-left: 20px !important;
+  }
+  .edit-button{
+    margin-right: 20px !important;
+  }
+  .check-box-inner{
+      display: flex;
+  }

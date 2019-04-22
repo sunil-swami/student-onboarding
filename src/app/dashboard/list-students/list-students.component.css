@@ -1,0 +1,19 @@
+.example-card {
+    /* max-width: 500px; */
+    float: left;
+    margin: 2%;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+
+  .international{
+    background-color: #6d94c7de !important;
+  }
+  .domestic{
+    background-color: #c9ad45be !important;
+  }
+  .pushRight{
+    margin-left: 20px !important;
+  }

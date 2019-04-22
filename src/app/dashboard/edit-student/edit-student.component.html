@@ -1,0 +1,148 @@
+
+  <div class="panel-group">
+      <div class="panelHead">
+        Onboarding Form (Edit)
+      </div>
+  
+      <div class="panelBodyCustom">
+          <form [formGroup]="studentForm" class="pushRight" (ngSubmit)="onSubmit()">
+        <div class="row bottomGap">
+            <mat-form-field class="pushRight"  >
+                <input matInput placeholder="Student Name" formControlName="name">
+                <mat-error *ngIf="studentForm.controls['name'].hasError('required')">
+                  Name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+        </div>
+        <div class="row bottomGap">
+              <mat-form-field class="pushRight"> 
+                <mat-label>Cateogry</mat-label>
+                <mat-select formControlName="category">
+                  <mat-option *ngFor="let category of categories" [value]="category.value">
+                    {{category.viewValue}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="studentForm.controls['category'].hasError('required')">
+                    Category is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+          </div>
+          <div class="row bottomGap">
+              <mat-form-field class="pushRight"> 
+                <input matInput [matDatepicker]="picker" placeholder="DOB" formControlName="dateOfBirth">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="studentForm.controls['dateOfBirth'].hasError('required')">
+                    DOB is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="row bottomGap">
+              <mat-form-field class="pushRight"> 
+                <input matInput placeholder="Father's Name" formControlName="fatherName">
+                <mat-error *ngIf="studentForm.controls['fatherName'].hasError('required')">
+                  Father's Name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="row bottomGap">
+              <mat-form-field class="pushRight"> 
+                <input matInput placeholder="Mother's Name" formControlName="motherName">
+                <mat-error *ngIf="studentForm.controls['motherName'].hasError('required')">
+                  Mother's Name is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="row bottomGap">
+              <mat-form-field class="pushRight"> 
+                <input type="number" matInput placeholder="Last Class Score" formControlName="lastClassScore">
+                <mat-icon matSuffix>%</mat-icon>
+                <mat-error *ngIf="studentForm.controls['lastClassScore'].hasError('required')">
+                  Last Class Score is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="row bottomGap">
+                <div class="col-sm-2">
+                  <label class="control-label">Documents:</label>
+                </div>
+                <div class="col-sm-2">
+                  <p class="form-control-static bottomGap titleField">Domicile</p>
+                  <p class="form-control-static bottomGap titleField">Birth certificate</p>
+                  <p class="form-control-static bottomGap titleField">Marksheets</p>
+                  <p class="form-control-static bottomGap titleField">Police clearance</p>
+                  <p class="form-control-static bottomGap titleField">Passport</p>
+                  <p class="form-control-static bottomGap titleField">Declaration</p>
+                </div>
+                <div class="col-sm-4 check-box">
+                    <div class="row check-box-inner">
+                    <mat-checkbox class="form-control-static bottomGap titleField"
+                   
+                    [labelPosition]="labelPosition"
+                     formControlName="domicileCertificate" >
+                    </mat-checkbox>
+                    <mat-error *ngIf="studentForm.controls['domicileCertificate'].hasError('required')">
+                        <strong>*</strong>
+                      </mat-error>
+                    </div>
+                    <div class="row check-box-inner">
+                      <mat-checkbox class="form-control-static bottomGap titleField"
+                      
+                      [labelPosition]="labelPosition"
+                       formControlName="birthCertificate">
+                    </mat-checkbox>
+                    <mat-error *ngIf="studentForm.controls['birthCertificate'].hasError('required')">
+                        <strong>*</strong>
+                      </mat-error>
+                    </div>
+                      <div class="row check-box-inner">
+                    <mat-checkbox class="form-control-static bottomGap titleField"
+                    formControlName="previousMarkSheet"
+                    [labelPosition]="labelPosition"
+                    >
+                    </mat-checkbox>
+                    <mat-error *ngIf="studentForm.controls['previousMarkSheet'].hasError('required')">
+                      <strong>*</strong>
+                    </mat-error>
+                  </div>
+                    <div class="row check-box-inner">
+                    <mat-checkbox class="form-control-static bottomGap titleField"
+                   
+                    [labelPosition]="labelPosition" formControlName="policeClearance">
+                    </mat-checkbox>
+                    <mat-error *ngIf="studentForm.controls['policeClearance'].hasError('required')">
+                      <strong>*</strong>
+                    </mat-error>
+                  </div>
+                    <div class="row check-box-inner">
+                    <mat-checkbox class="form-control-static bottomGap titleField"
+                     formControlName="passport"
+                    [labelPosition]="labelPosition"
+                    >
+                    </mat-checkbox>
+                    <mat-error *ngIf="studentForm.controls['passport'].hasError('required')">
+                      <strong>*</strong>
+                    </mat-error>
+                  </div>
+                    <div class="row check-box-inner">
+                    <mat-checkbox class="form-control-static bottomGap titleField"
+                    formControlName="signedDeclaration"
+                    [labelPosition]="labelPosition"
+                    ></mat-checkbox>
+                    <mat-error *ngIf="studentForm.controls['signedDeclaration'].hasError('required')">
+                      <strong>*</strong>
+                    </mat-error>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bottomGap">
+                      <button mat-raised-button class="edit-button" color="primary" type="button" (click)="Cancel()">Cancel</button>
+                      <button  mat-raised-button color="primary" type="submit">Update</button>
+                </div>  
+    </form>
+  </div>
+</div>
+
+
+

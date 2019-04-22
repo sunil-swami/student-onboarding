@@ -1,0 +1,15 @@
+<div class="visible-lg visible-md">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <!-- <img class="header-image-height" src='assets/images/logo.png'> -->
+      <span class="title left-margin-1-per">On Boarding App</span>
+      <span class="fill-remaining-space"></span>
+      <span class="user-font">{{userDisplayName}}</span>
+      <div class="user-icon-container">
+        <img class="user-pic" src="assets/images/user.svg">
+      </div>
+      <!-- <button mat-raised-button  >Logout</button> -->
+          <span class="glyphicon glyphicon-log-out" (click)="logout()"></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

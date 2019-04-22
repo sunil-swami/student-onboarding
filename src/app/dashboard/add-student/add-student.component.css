@@ -1,0 +1,9 @@
+.check-box{
+    display: grid;
+}
+.pushRight{
+    margin-left: 20px !important;
+  }
+  .check-box-inner{
+      display: flex;
+  }

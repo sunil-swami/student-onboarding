@@ -1,0 +1,105 @@
+
+  <div class="panel-group">
+    <div class="panelHead">
+      Onboarding Form (View)
+    </div>
+
+    <div class="panelBodyCustom">
+      <div class="row bottomGap">
+        <div class="col-sm-2">
+          <label class="control-label">Student Name:</label>
+        </div>
+        <div class="col-sm-2">
+          <p class="form-control-static titleField">{{studentContext.name}}</p>
+        </div>
+      </div>
+      <div class="row bottomGap">
+        <div class="col-sm-2">
+          <label class="control-label">Category:</label>
+        </div>
+        <div class="col-sm-2">
+          <p class="form-control-static titleField">{{studentContext.category}}</p>
+        </div>
+      </div>
+      <div class="row bottomGap">
+        <div class="col-sm-2">
+          <label class="control-label">Documents:</label>
+        </div>
+        <div class="col-sm-2">
+          <p class="form-control-static bottomGap titleField">Domicile</p>
+          <p class="form-control-static bottomGap titleField">Birth certificate</p>
+          <p class="form-control-static bottomGap titleField">Marksheets</p>
+          <p class="form-control-static bottomGap titleField">Police clearance</p>
+          <p class="form-control-static bottomGap titleField">Passport</p>
+          <p class="form-control-static bottomGap titleField">Declaration</p>
+        </div>
+        <div class="col-sm-4 check-box">
+            <mat-checkbox class="form-control-static bottomGap titleField"
+            [(ngModel)]="studentContext.domicileCertificate"
+            [labelPosition]="labelPosition"
+            [disabled]="true">
+            </mat-checkbox>
+              <mat-checkbox class="form-control-static bottomGap titleField"
+              [(ngModel)]="studentContext.birthCertificate"
+              [labelPosition]="labelPosition"
+              [disabled]="true">
+            </mat-checkbox>
+            <mat-checkbox class="form-control-static bottomGap titleField"
+            [(ngModel)]="studentContext.previousMarkSheet"
+            [labelPosition]="labelPosition"
+            [disabled]="true">
+            </mat-checkbox>
+            <mat-checkbox class="form-control-static bottomGap titleField"
+            [(ngModel)]="studentContext.policeClearance"
+            [labelPosition]="labelPosition"
+            [disabled]="true">
+            </mat-checkbox>
+            <mat-checkbox class="form-control-static bottomGap titleField"
+            [(ngModel)]="studentContext.passport"
+            [labelPosition]="labelPosition"
+            [disabled]="true">
+            </mat-checkbox>
+            <mat-checkbox class="form-control-static bottomGap titleField"
+            [(ngModel)]="studentContext.signedDeclaration"
+            [labelPosition]="labelPosition"
+            [disabled]="true">
+            </mat-checkbox>
+        </div>
+      </div>
+      <div class="row bottomGap">
+        <div class="col-sm-2">
+          <label class="control-label">DOB:</label>
+        </div>
+        <div class="col-sm-2">
+          <p class="form-control-static titleField">{{studentContext.dateOfBirth | date}}</p>
+        </div>
+      </div>
+      <div class="row bottomGap">
+        <div class="col-sm-2">
+          <label class="control-label">Father’s Name:</label>
+        </div>
+        <div class="col-sm-2">
+          <p class="form-control-static titleField">{{studentContext.fatherName}}</p>
+        </div>
+      </div>
+      <div class="row bottomGap">
+        <div class="col-sm-2">
+          <label class="control-label">Mother’s Name:</label>
+        </div>
+        <div class="col-sm-2">
+          <p class="form-control-static titleField">{{studentContext.motherName}}</p>
+        </div>
+      </div>
+      <div class="row bottomGap">
+        <div class="col-sm-2">
+          <label class="control-label">Last class Score:</label>
+        </div>
+        <div class="col-sm-2">
+          <p class="form-control-static titleField">{{studentContext.lastClassScore}}</p>
+        </div>
+      </div>
+      <div class="bottomGap">
+          <button mat-raised-button color="primary" type="button" (click)="Back()">Back</button>
+    </div>  
+    </div>
+  </div>

@@ -1,0 +1,64 @@
+<mat-sidenav-container>
+    <!-- side nav menu-->
+    <mat-sidenav #sidenav>
+        <mat-toolbar style="background: #3D6274">
+            <mat-toolbar-row>
+                <div  class="user-icon-container">
+                    <img _ngcontent-c6="" class="user-pic" src="assets/images/user.svg">
+                </div>
+                <span>{{userDisplayName}}</span>
+            </mat-toolbar-row>
+        </mat-toolbar>
+        <mat-nav-list>
+            <mat-list-item (click)="sidenav.toggle();">
+                <img _ngcontent-c6="" class="menu-list-icon" src="assets/images/dashboard-blue.svg">
+                <span>On Boarding Form</span>
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+    <!-- side nav menu-->
+
+    <mat-sidenav-content>
+        <div id="outer-container" class="outer-container">
+            <!-- toolbar for mobile version-->
+            <!-- toolbar for mobile version ends-->
+            <!--UI Selectors-->
+            <app-header></app-header>
+            <div id="page-loader" class="fade in" *ngIf="showLoader">
+                    <loaders-css style="position: absolute; left: 0; top:25%; right: 0; margin: 0 auto; z-index: 99;" [loader]="'line-scale-pulse-out-rapid'"
+                        [loaderClass]="'my-loader'"></loaders-css>
+                </div>
+            <!-- Desktop Navigation Tabs-->
+            <div class="tabHolder visible-lg visible-md">
+                <mat-tab-group   [selectedIndex]="selected.value"
+                (selectedIndexChange)="selected.setValue($event)" >
+                    <mat-tab label ='on-boarding'>
+                        <ng-template mat-tab-label>
+                            <!-- <i class="fa fa-tachometer icon " aria-hidden="true"></i> -->
+                            <img class="dashboard-icon" src="assets/images/dashboard.svg">
+                            <span class="tab-text tab-text-white">On Boarding Form</span>
+                        </ng-template>
+                    <app-view-student *ngIf="isViewOnBoardForm" ></app-view-student>  
+                    <app-edit-student *ngIf="isEditOnBoardForm" ></app-edit-student> 
+                    <app-add-student *ngIf="isOnBoardForm" ></app-add-student>
+                    <!-- <div class="button">
+                        <button mat-button color="accent" >Onboard</button>
+                      </div> -->
+                    </mat-tab>
+
+                    <mat-tab label = 'list-student'>
+                        <ng-template mat-tab-label>
+                            <!-- <i class="fa fa-tachometer icon " aria-hidden="true"></i> -->
+                            <img class="dashboard-icon" src="assets/images/clipboards.svg">
+                            <span class="tab-text tab-text-white">List Students</span>
+                        </ng-template>
+                        <app-list-students></app-list-students> 
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+            <!-- Desktop Navigation Tabs Ends  -->
+            <router-outlet></router-outlet>
+            <!--UI Selectors ends-->
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
